@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anjose-d <anjose-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/19 01:03:05 by anjose-d          #+#    #+#             */
+/*   Updated: 2021/06/19 01:03:06 by anjose-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int		ft_strlen(char *str);
 char	*null_string(char *str);
 int		to_find_verify(char *str_tofind, int i_find, char *str, int i_str);
