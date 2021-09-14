@@ -6,7 +6,7 @@
 /*   By: anjose-d <anjose-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 19:44:37 by anjose-d          #+#    #+#             */
-/*   Updated: 2021/09/11 19:45:26 by anjose-d         ###   ########.fr       */
+/*   Updated: 2021/09/14 14:31:51 by anjose-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,6 @@ void	ft_print_number(int nbr, char *base, unsigned int base_n)
 	int		nbr_s;
 	int		tmp;
 
-	if (!nbr)
-		return ;
 	tmp = nbr;
 	nbr_s = 1;
 	while (tmp >= base_n)
@@ -70,14 +68,12 @@ void	ft_print_number(int nbr, char *base, unsigned int base_n)
 		tmp /= base_n;
 	}
 	number[nbr_s] = '\0';
-	nbr_s--;
-	while (nbr_s >= 0)
+	while (--nbr_s >= 0)
 	{
 		tmp = nbr;
 		tmp %= base_n;
 		number[nbr_s] = base[tmp];
 		nbr = (nbr - tmp) / base_n;
-		nbr_s--;
 	}
 	ft_putchar(number);
 }
@@ -87,6 +83,7 @@ void	ft_putchar(char *str)
 	while (*str)
 		write(1, &*(str++), 1);
 }
+
 /* RECURSION FUNCTION SOLUTION */
 /*
 void	ft_print_number(int nbr, char *base, unsigned int base_n)
